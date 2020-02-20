@@ -16,6 +16,7 @@ class Persona
 public:
     Persona();
     Persona(string nombre, string apellidos, string DNI);
+    Persona(string nombre, string apellidos, string DNI, tipo clase);
     ~Persona(void);
 
     //Getters
@@ -30,6 +31,8 @@ public:
     void setApellidos(string apellidos);
     void setDNI(string DNI);
 
+    //Devuelve los datos de la persona como string
+    string toString();
 
 
 private:
