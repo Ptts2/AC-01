@@ -25,17 +25,53 @@ void Profesor::addAlumno(Alumno alumno)
 
 void Profesor::asignarNotas(Alumno alumno, int nota1)
 {
-    alumno.setNotas(nota1);
+    int alumnos = this->alumnos.size(), i = 0;
+    bool found = false;
+
+    while(!found && i < alumnos)
+    {
+        if(this->alumnos[i].equals(alumno))
+        {
+            found = true;
+            this->alumnos[i].Alumno::setNotas(nota1);
+        }
+        i++;
+    }
 }
 
 void Profesor::asignarNotas(Alumno alumno, int nota1, int nota2)
 {
-    alumno.setNotas(nota1, nota2);
+    int alumnos = this->alumnos.size(), i = 0;
+    bool found = false;
+
+    while(!found && i < alumnos)
+    {
+
+        if(this->alumnos[i].equals(alumno))
+        {
+            found = true;
+            this->alumnos[i].Alumno::setNotas(nota1, nota2);
+        }
+        i++;
+    }
+
 }
 
 void Profesor::asignarNotas(Alumno alumno, int nota1, int nota2, int nota3)
 {
-    alumno.setNotas(nota1, nota2, nota3);
+    int alumnos = this->alumnos.size(), i = 0;
+    bool found = false;
+
+    while(!found && i < alumnos)
+    {
+
+        if(this->alumnos[i].equals(alumno))
+        {
+            found = true;
+            this->alumnos[i].Alumno::setNotas(nota1, nota2, nota3);
+        }
+        i++;
+    }
 }
 
 double Profesor::obtenerMedia(Alumno alumno)
@@ -51,8 +87,12 @@ void Profesor::printAlumnos()
     {
         cout << this->alumnos[i].toString() << "-------------------------------------------------------------" << endl;
     }
+    if(alumnos.size() == 0)
+        cout << "ESTE PROFESOR NO TIENE ALUMNOS." << endl;
 
     this->printMejorAlumno();
+
+    cout <<"------------------------------------------------------------------------------------------------------------------------" <<endl;
 }
 
 void Profesor::printMejorAlumno()

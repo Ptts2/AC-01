@@ -65,3 +65,22 @@ string Alumno::toString()
     }
     return "ALUMNO: "+this->Persona::toString()+ "\n" +notas+"\nNOTA MEDIA: "+to_string(this->getMedia())+"\n";
 }
+
+bool Alumno::equals(Alumno alumno)
+{
+
+    if(this == &alumno)
+    {
+        return true;
+    }
+
+    if(this->Persona::getDNI() == alumno.Persona::getDNI() && this->Persona::getNombre() == alumno.Persona::getNombre() && this->Persona::getApellidos() == alumno.Persona::getApellidos())
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+
+}

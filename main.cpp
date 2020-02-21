@@ -1,31 +1,51 @@
 #include <iostream>
+#include <string>
+#include <vector>
 #include "persona.h"
 #include "profesor.h"
 #include "alumno.h"
 
+using namespace std;
+
+void Calificando();
+
 int main()
 {
-    //Calificando();
-
-	//PRUEBAS
-	/*
-    Profesor p("Paco", "paco", "123");
-    Alumno a1("Pedro", "El mas listo", "111");
-    Alumno a2("Pablo", "El mas tonto", "012");
-    Alumno a3("Rodrigo", "El no exams", "001");
-    Alumno a4("Samuel", "El solo 2 examns", "007");
-
-    a1.setNotas(10, 9 );
-    a2.setNotas(0, 4);
-    a3.setNotas(10);
-    a4.setNotas(7, 3);
-
-    p.addAlumno(a1);
-    p.addAlumno(a2);
-    p.addAlumno(a3);
-    p.addAlumno(a4);
-
-    p.printAlumnos();
-	*/
+    Calificando();
     return 0;
+}
+
+void Calificando()
+{
+
+    vector<Profesor> profesores;
+    vector<Alumno> alumnos;
+
+    profesores.push_back(Profesor("Profesor", "1", "0001"));
+    profesores.push_back(Profesor("Profesor", "2", "0002"));
+    profesores.push_back(Profesor("Profesor", "3", "0003"));
+
+    alumnos.push_back(Alumno("Pedro", "Ramirez", "0004"));
+    alumnos.push_back(Alumno("Angel", "Felipe Vallesteros", "0005"));
+    alumnos.push_back(Alumno("Francisco Jose", "Almansa Martinez", "0006"));
+    alumnos.push_back(Alumno("Alex", "Garcia Lopez", "0007"));
+    alumnos.push_back(Alumno("Felipe", "Felipe felipe", "0008"));
+
+    profesores[0].addAlumno(alumnos[0]);
+    profesores[0].addAlumno(alumnos[1]);
+    profesores[0].addAlumno(alumnos[2]);
+    profesores[1].addAlumno(alumnos[3]);
+    profesores[1].addAlumno(alumnos[4]);
+
+    string nombre = alumnos[0].getDNI();
+
+    profesores[0].asignarNotas(alumnos[0], 1, 10);
+    profesores[0].asignarNotas(alumnos[1], 10, 10, 10);
+    profesores[0].asignarNotas(alumnos[2], 1);
+    profesores[1].asignarNotas(alumnos[3], 0, 0, 0);
+    profesores[1].asignarNotas(alumnos[4], 10, 10);
+
+
+    for(int i = 0; i<(int)profesores.size(); i++)
+        profesores[i].printAlumnos();
 }

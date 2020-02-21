@@ -25,6 +25,9 @@ public:
     //Metodo que devuelve la media de sus notas
     double getMedia();
 
+    //Metodo que devuelve true si es igual y falso si no
+    bool equals(Alumno alumno);
+
     //Devuelve los datos del alumno como un string
     string toString();
 
