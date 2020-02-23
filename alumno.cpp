@@ -63,7 +63,7 @@ string Alumno::toString()
     {
         notas = notas + "NOTA "+to_string((i+1))+": "+to_string(this->notas[i])+"   ";
     }
-    return "ALUMNO: "+this->Persona::toString()+ "\n" +notas+"\nNOTA MEDIA: "+to_string(this->getMedia())+"\n";
+    return "ALUMNO: "+this->Persona::toString()+ "\n" +notas+"\nNOTA MEDIA: "+to_string(this->Alumno::getMedia())+"\n";
 }
 
 bool Alumno::equals(Alumno alumno)

@@ -13,15 +13,15 @@ public:
     Profesor(string nombre, string apellidos, string DNI);
     ~Profesor();
 
-    void addAlumno(Alumno alumno);
+    void addAlumno(Alumno &alumno);
 
     //asignarNotas metodo sobrecargado (puede asignar de 1 a 3 notas)
-    void asignarNotas(Alumno alumno, int nota1);
-    void asignarNotas(Alumno alumno, int nota1, int nota2);
-    void asignarNotas(Alumno alumno, int nota1, int nota2, int nota3);
+    void asignarNotas(Alumno &alumno, int nota1);
+    void asignarNotas(Alumno &alumno, int nota1, int nota2);
+    void asignarNotas(Alumno &alumno, int nota1, int nota2, int nota3);
 
     //Metodo que obtiene la nota media del alumno pasado como parametro
-    double obtenerMedia(Alumno alumno);
+    double obtenerMedia(Alumno &alumno);
 
     //Metodo que imprime por pantalla la lista de alumnos,
     //incluyendo sus datos y nota media

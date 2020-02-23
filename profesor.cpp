@@ -18,12 +18,12 @@ Profesor::~Profesor()
 {
 }
 
-void Profesor::addAlumno(Alumno alumno)
+void Profesor::addAlumno(Alumno &alumno)
 {
     this->alumnos.push_back(alumno);
 }
 
-void Profesor::asignarNotas(Alumno alumno, int nota1)
+void Profesor::asignarNotas(Alumno &alumno, int nota1)
 {
     int alumnos = this->alumnos.size(), i = 0;
     bool found = false;
@@ -39,7 +39,7 @@ void Profesor::asignarNotas(Alumno alumno, int nota1)
     }
 }
 
-void Profesor::asignarNotas(Alumno alumno, int nota1, int nota2)
+void Profesor::asignarNotas(Alumno &alumno, int nota1, int nota2)
 {
     int alumnos = this->alumnos.size(), i = 0;
     bool found = false;
@@ -57,7 +57,7 @@ void Profesor::asignarNotas(Alumno alumno, int nota1, int nota2)
 
 }
 
-void Profesor::asignarNotas(Alumno alumno, int nota1, int nota2, int nota3)
+void Profesor::asignarNotas(Alumno &alumno, int nota1, int nota2, int nota3)
 {
     int alumnos = this->alumnos.size(), i = 0;
     bool found = false;
@@ -74,7 +74,7 @@ void Profesor::asignarNotas(Alumno alumno, int nota1, int nota2, int nota3)
     }
 }
 
-double Profesor::obtenerMedia(Alumno alumno)
+double Profesor::obtenerMedia(Alumno &alumno)
 {
     return alumno.getMedia();
 }
