@@ -15,12 +15,12 @@ public:
 
     //Getters
     int getNumNotas();
-    vector<int> getNotas();
+    vector<double> getNotas();
 
     //SetNotas metodo sobrecargado (puede tener de 1 a 3 notas)
-    void setNotas(int nota1);
-    void setNotas(int nota1, int nota2);
-    void setNotas(int nota1, int nota2, int nota3);
+    void setNotas(double nota1);
+    void setNotas(double nota1, double nota2);
+    void setNotas(double nota1, double nota2, double nota3);
 
     //Metodo que devuelve la media de sus notas
     double getMedia();
@@ -32,7 +32,7 @@ public:
     string toString();
 
 private:
-    vector<int> notas;
+    vector<double> notas;
 };
 
 #endif // ALUMNO_H
