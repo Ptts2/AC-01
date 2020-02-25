@@ -13,7 +13,10 @@ public:
     Profesor(string nombre, string apellidos, string DNI);
     ~Profesor();
 
-    void addAlumno(Alumno &alumno);
+    void addAlumno(Alumno alumno);
+
+    //Funcion que devuelve el vector de alumnos
+    vector<Alumno> getAlumnos();
 
     //asignarNotas metodo sobrecargado (puede asignar de 1 a 3 notas)
     void asignarNotas(Alumno &alumno, int nota1);
