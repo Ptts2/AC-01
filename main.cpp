@@ -29,8 +29,8 @@ void Calificando()
     profesores[0].addAlumno(Alumno("Francisco Jose", "Almansa Martinez", "0006"));
     profesores[1].addAlumno(Alumno("Alex", "Garcia Lopez", "0007"));
     profesores[1].addAlumno(Alumno("Felipe", "Felipe felipez", "0008"));
-    
-    
+
+
     profesores[0].asignarNotas(profesores[0].getAlumnos()[0], 1, 10);
     profesores[0].asignarNotas(profesores[0].getAlumnos()[1], 10, 10, 10);
     profesores[0].asignarNotas(profesores[0].getAlumnos()[2], 1);
@@ -61,15 +61,15 @@ void Calificando()
             i++;
           }
           i=0;
-          int j = 0;  
+          int j = 0;
           while(noEncontrado && i <(int)profesores.size())
           {
               j=0;
                 while(noEncontrado && j <(int)profesores[i].getAlumnos().size())
                 {
-                    if(profesores[i].getAlumnos()[i].Persona::getDNI() == DNI)
+                    if(profesores[i].getAlumnos()[j].Persona::getDNI() == DNI)
                     {
-                        cout << endl << profesores[i].getAlumnos()[i].toString();
+                        cout << endl << profesores[i].getAlumnos()[j].toString();
                         noEncontrado = false;
                     }
                     j++;
