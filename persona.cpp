@@ -18,14 +18,6 @@ Persona::~Persona(void)
 {
 }
 
-string Persona::getClase()
-{
-   if(this->clase==PROFESOR)
-       return "Profesor";
-   else
-       return "Alumno";
-}
-
 string Persona::getNombre()
 {
     return this->nombre;
