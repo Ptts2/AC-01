@@ -7,10 +7,9 @@ using namespace std;
 
 Profesor::Profesor()
 {
-    this->Persona::setClase(tipo::PROFESOR);
 }
 
-Profesor::Profesor(string nombre, string apellidos, string DNI):Persona(nombre, apellidos, DNI, tipo::PROFESOR)
+Profesor::Profesor(string nombre, string apellidos, string DNI):Persona(nombre, apellidos, DNI)
 {
 }
 
@@ -18,10 +17,16 @@ Profesor::~Profesor()
 {
 }
 
-void Profesor::addAlumno(Alumno &alumno)
+void Profesor::addAlumno(Alumno alumno)
 {
     this->alumnos.push_back(alumno);
 }
+
+vector<Alumno> Profesor::getAlumnos()
+{
+    return this->alumnos;
+}
+
 
 void Profesor::asignarNotas(Alumno &alumno, int nota1)
 {
