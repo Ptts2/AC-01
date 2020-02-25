@@ -13,7 +13,6 @@ public:
     ~Persona(void);
 
     //Getters
-    string getClase();
     string getNombre();
     string getApellidos();
     string getDNI();
