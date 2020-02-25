@@ -1,35 +1,52 @@
-#ifndef PERSONA_H
-#define PERSONA_H
-
+#include "persona.h"
 #include <iostream>
 
 using namespace std;
-
-class Persona
+Persona::Persona()
 {
-public:
-    Persona();
-    Persona(string nombre, string apellidos, string DNI);
-    ~Persona(void);
+    cout << "No soy nadie" << endl;
+}
 
-    //Getters
-    string getNombre();
-    string getApellidos();
-    string getDNI();
+Persona::Persona(string nombre, string apellidos, string DNI)
+{
+    this->nombre = nombre;
+    this->apellidos = apellidos;
+    this->DNI = DNI;
+}
 
-    //Setters
-    void setNombre(string nombre);
-    void setApellidos(string apellidos);
-    void setDNI(string DNI);
+Persona::~Persona(void)
+{
+}
 
-    //Devuelve los datos de la persona como string
-    string toString();
+string Persona::getNombre()
+{
+    return this->nombre;
+}
 
+string Persona::getApellidos()
+{
+    return this->apellidos;
+}
 
-private:
-    string nombre;
-    string apellidos;
-    string DNI;
-};
+string Persona::getDNI()
+{
+    return this->DNI;
+}
 
-#endif // PERSONA_H
+void Persona::setNombre(string nombre)
+{
+    this->nombre = nombre;
+}
+void Persona::setApellidos(string apellidos)
+{
+    this->apellidos = apellidos;
+}
+void Persona::setDNI(string DNI)
+{
+    this->DNI = DNI;
+}
+
+string Persona::toString()
+{
+        return this->nombre+" "+this->apellidos+" DNI: "+this->DNI;
+}
