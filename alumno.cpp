@@ -10,10 +10,9 @@ Alumno::Alumno()
 
 Alumno::~Alumno()
 {
-    this->Persona::setClase(tipo::ALUMNO);
 }
 
-Alumno::Alumno(string nombre, string apellidos, string DNI):Persona(nombre, apellidos, DNI, tipo::ALUMNO)
+Alumno::Alumno(string nombre, string apellidos, string DNI):Persona(nombre, apellidos, DNI)
 {
 }
 
