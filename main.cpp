@@ -19,29 +19,23 @@ void Calificando()
 {
 
     vector<Profesor> profesores;
-    vector<Alumno> alumnos;
 
     profesores.push_back(Profesor("Profesor", "1", "0001"));
     profesores.push_back(Profesor("Profesor", "2", "0002"));
     profesores.push_back(Profesor("Profesor", "3", "0003"));
 
-    alumnos.push_back(Alumno("Pedro", "Ramirez Campos", "0004"));
-    alumnos.push_back(Alumno("Angel", "Felipe Vallesteros", "0005"));
-    alumnos.push_back(Alumno("Francisco Jose", "Almansa Martinez", "0006"));
-    alumnos.push_back(Alumno("Alex", "Garcia Lopez", "0007"));
-    alumnos.push_back(Alumno("Felipe", "Felipe felipez", "0008"));
-
-    profesores[0].addAlumno(alumnos[0]);
-    profesores[0].addAlumno(alumnos[1]);
-    profesores[0].addAlumno(alumnos[2]);
-    profesores[1].addAlumno(alumnos[3]);
-    profesores[1].addAlumno(alumnos[4]);
-
-    profesores[0].asignarNotas(alumnos[0], 1, 10);
-    profesores[0].asignarNotas(alumnos[1], 10, 10, 10);
-    profesores[0].asignarNotas(alumnos[2], 1);
-    profesores[1].asignarNotas(alumnos[3], 0, 0, 0);
-    profesores[1].asignarNotas(alumnos[4], 10, 10);
+    profesores[0].addAlumno(Alumno("Pedro", "Ramirez Campos", "0004"));
+    profesores[0].addAlumno(Alumno("Angel", "Felipe Vallesteros", "0005"));
+    profesores[0].addAlumno(Alumno("Francisco Jose", "Almansa Martinez", "0006"));
+    profesores[1].addAlumno(Alumno("Alex", "Garcia Lopez", "0007"));
+    profesores[1].addAlumno(Alumno("Felipe", "Felipe felipez", "0008"));
+    
+    
+    profesores[0].asignarNotas(profesores[0].getAlumnos()[0], 1, 10);
+    profesores[0].asignarNotas(profesores[0].getAlumnos()[1], 10, 10, 10);
+    profesores[0].asignarNotas(profesores[0].getAlumnos()[2], 1);
+    profesores[1].asignarNotas(profesores[1].getAlumnos()[0], 0, 0, 0);
+    profesores[1].asignarNotas(profesores[1].getAlumnos()[1], 10, 10);
 
 
     for(int i = 0; i<(int)profesores.size(); i++)
@@ -67,12 +61,18 @@ void Calificando()
             i++;
           }
           i=0;
-          while(noEncontrado && i <(int)alumnos.size())
+          int j = 0;  
+          while(noEncontrado && i <(int)profesores.size())
           {
-                if(alumnos[i].Persona::getDNI() == DNI)
+              j=0;
+                while(noEncontrado && j <(int)profesores[i].getAlumnos().size())
                 {
-                    cout << endl << alumnos[i].toString();
-                    noEncontrado = false;
+                    if(profesores[i].getAlumnos()[i].Persona::getDNI() == DNI)
+                    {
+                        cout << endl << profesores[i].getAlumnos()[i].toString();
+                        noEncontrado = false;
+                    }
+                    j++;
                 }
             i++;
           }
