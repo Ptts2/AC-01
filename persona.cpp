@@ -14,14 +14,6 @@ Persona::Persona(string nombre, string apellidos, string DNI)
     this->DNI = DNI;
 }
 
-Persona::Persona(string nombre, string apellidos, string DNI, tipo clase)
-{
-    this->nombre = nombre;
-    this->apellidos = apellidos;
-    this->DNI = DNI;
-    this->clase = clase;
-}
-
 Persona::~Persona(void)
 {
 }
