@@ -5,18 +5,11 @@
 
 using namespace std;
 
-enum tipo
-{
-    PROFESOR,
-    ALUMNO
-};
-
 class Persona
 {
 public:
     Persona();
     Persona(string nombre, string apellidos, string DNI);
-    Persona(string nombre, string apellidos, string DNI, tipo clase);
     ~Persona(void);
 
     //Getters
@@ -39,8 +32,6 @@ private:
     string nombre;
     string apellidos;
     string DNI;
-    tipo clase;
-
 };
 
 #endif // PERSONA_H
