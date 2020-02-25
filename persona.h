@@ -19,7 +19,6 @@ public:
     string getDNI();
 
     //Setters
-    void setClase(tipo clase);
     void setNombre(string nombre);
     void setApellidos(string apellidos);
     void setDNI(string DNI);
