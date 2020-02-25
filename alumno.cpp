@@ -21,22 +21,22 @@ int Alumno::getNumNotas()
     return this->notas.size();
 }
 
-vector<int> Alumno::getNotas()
+vector<double> Alumno::getNotas()
 {
     return this->notas;
 }
 
-void Alumno::setNotas(int nota1)
+void Alumno::setNotas(double nota1)
 {
     this->notas.push_back(nota1);
 }
-void Alumno::setNotas(int nota1, int nota2)
+void Alumno::setNotas(double nota1, double nota2)
 {
     this->notas.push_back(nota1);
     this->notas.push_back(nota2);
 
 }
-void Alumno::setNotas(int nota1, int nota2, int nota3)
+void Alumno::setNotas(double nota1, double nota2, double nota3)
 {
     this->notas.push_back(nota1);
     this->notas.push_back(nota2);
