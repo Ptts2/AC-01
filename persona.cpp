@@ -33,10 +33,6 @@ string Persona::getDNI()
     return this->DNI;
 }
 
-void Persona::setClase(tipo clase)
-{
-    this->clase = clase;
-}
 void Persona::setNombre(string nombre)
 {
     this->nombre = nombre;
